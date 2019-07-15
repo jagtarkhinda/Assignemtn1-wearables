@@ -14,4 +14,7 @@ class RowController: NSObject{
 
     @IBOutlet var label1: WKInterfaceLabel!
     
+    @IBOutlet var rightImg: WKInterfaceImage!
+    
+    @IBOutlet var leftImg: WKInterfaceImage!
 }

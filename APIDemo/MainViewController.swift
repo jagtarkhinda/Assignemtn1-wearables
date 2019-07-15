@@ -51,7 +51,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     var gamesubs: [String] = ["0","0","0","0","0","0","0","0"]
     
    public var semifinal1 = [String : Any]()
-    
     var semifinal2 = [String : Any]()
     var quarterfinal1 = [String : Any]()
     var quarterfinal2 = [String : Any]()
@@ -155,7 +154,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     
+     print(semifinal1)
          let currentsub = gamesubs[indexPath.row]
         if(currentsub != "1")
         {
@@ -168,9 +167,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         if (WCSession.default.isReachable) {
             // construct the message you want to send
             // the message is in dictionary
-            let msg = ["sub" : (gamesubs[indexPath.row]),
-                       "path" : indexPath.row] as [String : Any]
-            
+           // let msg = semifinal1
+            let msg = ["date": gamesubs,
+                       "sub": gamesubs[indexPath.row]] as [String : Any]
                  WCSession.default.sendMessage(msg, replyHandler: nil, errorHandler: nil)
            
            

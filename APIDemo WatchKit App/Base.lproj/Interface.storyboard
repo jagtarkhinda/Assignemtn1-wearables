@@ -17,19 +17,25 @@
                         <table alignment="left" id="s1Y-Hy-lhQ">
                             <items>
                                 <tableRow identifier="myRow" id="wZh-30-0jk" customClass="RowController" customModule="APIDemo_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="mve-pp-Jvw">
+                                    <group key="rootItem" width="1" alignment="left" contentMode="redraw" id="mve-pp-Jvw">
                                         <items>
-                                            <label alignment="left" text="Label" id="8vI-IX-glN"/>
+                                            <imageView width="32" alignment="left" verticalAlignment="center" contentMode="scaleAspectFill" id="hgt-kW-Qir"/>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="8vI-IX-glN"/>
+                                            <imageView width="32" alignment="right" verticalAlignment="center" contentMode="scaleAspectFill" id="mNU-g6-122"/>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="label1" destination="8vI-IX-glN" id="whc-zX-Xya"/>
+                                        <outlet property="leftImg" destination="hgt-kW-Qir" id="T9f-fn-W0I"/>
+                                        <outlet property="rightImg" destination="mNU-g6-122" id="Rqm-sP-nLV"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <label width="136" height="37" alignment="left" text="Label" id="9H9-7f-8Fx"/>
                     </items>
                     <connections>
+                        <outlet property="noGame" destination="9H9-7f-8Fx" id="ZYd-1Y-8yg"/>
                         <outlet property="watchtable" destination="s1Y-Hy-lhQ" id="Lai-XG-pcK"/>
                     </connections>
                 </controller>
