@@ -12,10 +12,38 @@ import Alamofire
 import SwiftyJSON
 import WatchConnectivity
 
+ public var mainArray: [[Any]] = []
+
 class PAGE1InterfaceController: WKInterfaceController,  WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
+    
+    //API DATA//////////////////////
+    
+    //Variables for storing API data
+    var arraysemi1: [Any] = []
+    var arraysemi2: [Any] = []
+    var arrayquarter1: [Any] = []
+    var arrayquarter2: [Any] = []
+    var arrayquarter3: [Any] = []
+    var arrayquarter4: [Any] = []
+    var arraythird: [Any] = []
+    var arrayfinal: [Any] = []
+    
+//    var mainArray: [[Any]] = []
+    var gamesubs: [String] = ["0","0","0","0","0","0","0","0"]
+    
+    public var semifinal1 = [String : Any]()
+    var semifinal2 = [String : Any]()
+    var quarterfinal1 = [String : Any]()
+    var quarterfinal2 = [String : Any]()
+    var quarterfinal3 = [String : Any]()
+    var quarterfinal4 = [String : Any]()
+    var matchthird = [String: Any]()
+    var matchfinal = [String: Any]()
+    
+    //API DATA END/////////////////////////
     
     // 1: Session property
     private var session = WCSession.default
@@ -60,7 +88,7 @@ class PAGE1InterfaceController: WKInterfaceController,  WCSessionDelegate {
             {
                 if(self.subunsub[i] == "1")
                 {
-                    self.subGames.append(self.mainArray[i])
+                    self.subGames.append(mainArray[i])
                     self.j += 1
                     self.count += 1
                 }
@@ -127,31 +155,7 @@ class PAGE1InterfaceController: WKInterfaceController,  WCSessionDelegate {
     var pdata = ["dd","rr"]
     
     
-    //API DATA//////////////////////
     
-    //Variables for storing API data
-    var arraysemi1: [Any] = []
-    var arraysemi2: [Any] = []
-    var arrayquarter1: [Any] = []
-    var arrayquarter2: [Any] = []
-    var arrayquarter3: [Any] = []
-    var arrayquarter4: [Any] = []
-    var arraythird: [Any] = []
-    var arrayfinal: [Any] = []
-    
-    var mainArray: [[Any]] = []
-    var gamesubs: [String] = ["0","0","0","0","0","0","0","0"]
-    
-    public var semifinal1 = [String : Any]()
-    var semifinal2 = [String : Any]()
-    var quarterfinal1 = [String : Any]()
-    var quarterfinal2 = [String : Any]()
-    var quarterfinal3 = [String : Any]()
-    var quarterfinal4 = [String : Any]()
-    var matchthird = [String: Any]()
-    var matchfinal = [String: Any]()
-    
-    //API DATA END/////////////////////////
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -203,14 +207,14 @@ class PAGE1InterfaceController: WKInterfaceController,  WCSessionDelegate {
             self.arraythird = [self.matchthird["date"]!,self.matchthird["time"]!,self.matchthird["location"]!,self.matchthird["teama"]!,self.matchthird["teamb"]!]
             self.arrayfinal = [self.matchfinal["date"]!,self.matchfinal["time"]!,self.matchfinal["location"]!,self.matchfinal["teama"]!,self.matchfinal["teamb"]!]
             
-            self.mainArray.append(self.arraysemi1)
-            self.mainArray.append(self.arraysemi2)
-            self.mainArray.append(self.arrayquarter1)
-            self.mainArray.append(self.arrayquarter2)
-            self.mainArray.append(self.arrayquarter3)
-            self.mainArray.append(self.arrayquarter4)
-            self.mainArray.append(self.arraythird)
-            self.mainArray.append(self.arrayfinal)
+            mainArray.append(self.arraysemi1)
+            mainArray.append(self.arraysemi2)
+            mainArray.append(self.arrayquarter1)
+            mainArray.append(self.arrayquarter2)
+            mainArray.append(self.arrayquarter3)
+            mainArray.append(self.arrayquarter4)
+            mainArray.append(self.arraythird)
+            mainArray.append(self.arrayfinal)
             
         
 

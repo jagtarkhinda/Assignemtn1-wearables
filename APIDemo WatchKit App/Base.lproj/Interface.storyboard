@@ -37,10 +37,42 @@
                     <connections>
                         <outlet property="noGame" destination="9H9-7f-8Fx" id="ZYd-1Y-8yg"/>
                         <outlet property="watchtable" destination="s1Y-Hy-lhQ" id="Lai-XG-pcK"/>
+                        <segue destination="Cjb-fC-03q" kind="relationship" relationship="nextPage" id="vG7-6s-4lH"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-293" y="21"/>
+        </scene>
+        <!--Page2 Interface Controller-->
+        <scene sceneID="QJE-1t-zeN">
+            <objects>
+                <controller id="Cjb-fC-03q" customClass="Page2InterfaceController" customModule="APIDemo_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="Fel-iE-3x5">
+                            <items>
+                                <tableRow identifier="fulltb" id="1EV-mY-Dgi" customClass="FullRowController" customModule="APIDemo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="9k8-dX-G55">
+                                        <items>
+                                            <imageView width="32" alignment="left" verticalAlignment="center" contentMode="scaleAspectFill" id="wHQ-Bq-siD"/>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="Bkk-1g-AVN"/>
+                                            <imageView width="32" alignment="right" verticalAlignment="center" contentMode="scaleAspectFill" id="xzr-hJ-Aya"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="lbl" destination="Bkk-1g-AVN" id="2QH-vH-4rT"/>
+                                        <outlet property="limg" destination="wHQ-Bq-siD" id="lXD-s2-6wg"/>
+                                        <outlet property="rimg" destination="xzr-hJ-Aya" id="IlD-za-akz"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="fullTable" destination="Fel-iE-3x5" id="d40-2o-nfx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-81" y="6"/>
         </scene>
     </scenes>
 </document>
