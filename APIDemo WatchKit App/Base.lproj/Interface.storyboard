@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rVS-Ce-Ydo">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iGR-KL-ERX">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,26 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="UU3-MZ-HKZ">
+            <objects>
+                <controller id="iGR-KL-ERX">
+                    <items>
+                        <button width="1" alignment="left" title="All Games" id="TyT-vR-1le">
+                            <connections>
+                                <segue destination="Cjb-fC-03q" kind="push" id="5Wm-Mm-Oob"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Sub List" id="9bh-Jb-fJJ">
+                            <connections>
+                                <segue destination="rVS-Ce-Ydo" kind="push" id="zGV-Lh-2Wu"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-614" y="129"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="UMt-xw-5Wg">
             <objects>
@@ -75,4 +95,7 @@
             <point key="canvasLocation" x="-81" y="6"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Wm-Mm-Oob"/>
+    </inferredMetricsTieBreakers>
 </document>
